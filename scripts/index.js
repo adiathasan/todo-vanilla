@@ -155,6 +155,8 @@ $form.addEventListener('submit', (e) => {
 
 		if (todoEditIdx !== -1) {
 			todos[todoEditIdx].title = $input.value;
+
+			editableId = null;
 		}
 
 		$btnSubmit.innerHTML = 'ADD+';
