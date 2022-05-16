@@ -33,7 +33,8 @@ const renderTodoList = ({ saveToStorage = true } = {}) => {
 
 		todoList += `
                         <li id="${MainId}" class="${
-			(todo.completed ? 'bg-green-200' : 'bg-green-300') + ' w-full shadow flex space-x-1 items-center p-2 rounded'
+			(todo.completed ? 'bg-green-200' : 'bg-green-300') +
+			' w-full transition-all duration-500 shadow flex space-x-1 items-center p-2 rounded'
 		}">
                                 <input id="${CheckBoxId}" type="checkbox" ${
 			todo.completed ? 'checked' : ''
