@@ -27,4 +27,8 @@ const getLocalStorageItem = (key) => {
 	return JSON.parse(localStorage.getItem(key));
 };
 
-export { $, getIdsTodo, getLocalStorageItem, setLocalStorageItem };
+const generateId = () => {
+	return 'todo-each-' + Date.now();
+};
+
+export { $, getIdsTodo, getLocalStorageItem, setLocalStorageItem, generateId };

@@ -1,7 +1,7 @@
 import { response } from './data.js';
 
 import { $btnSubmit, $form, $input, $todoList } from './selectors.js';
-import { $, getIdsTodo, getLocalStorageItem, setLocalStorageItem } from './utils.js';
+import { $, generateId, getIdsTodo, getLocalStorageItem, setLocalStorageItem } from './utils.js';
 
 const TODO_KEY = 'todo:core';
 
@@ -162,7 +162,7 @@ $form.addEventListener('submit', (e) => {
 		$btnSubmit.innerHTML = 'ADD+';
 	} else {
 		const todo = {
-			id: todos.length + 1,
+			id: generateId(),
 			title: $input.value,
 			completed: false,
 		};
